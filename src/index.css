@@ -1,0 +1,52 @@
+@import "@kofile/gds-grid";
+
+body {
+    padding: 7rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+
+thead, tfoot {
+    background: #333;
+    color: white;
+}
+
+
+th, td {
+    text-align: left;
+    padding: 16px;
+    border: 1px solid #ddd;
+    
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.resizer{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #27bbff;
+    cursor: col-resize;
+    user-select: none;
+    touch-action: none;
+  }
+
+  .resizer.isResizing {
+    background: #2eff31;
+    opacity: 1;
+  }
+
+  *:hover > .resizer {
+    opacity: 1;
+  }
